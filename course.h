@@ -3,9 +3,10 @@
 
 class course{
 	public:
-		course(int sTime, int eTime, const char* date);
-		int sT,eT;
+		course (const char* name,int credit, int sTime, int eTime, const char* date);
+		int sT,eT,c;
 		const char* d;
+		const char* n;
 };
 
 #endif 
