@@ -25,7 +25,49 @@ bool goodCourse(course* c1, course* c2){
 	return 0;	
 };
 
+void printMenu(){
+	printf("Yo Yo Yo what you taking next semester?\n");
+}
+
+
+course* buildCourse(int i){
+	int idx=i;
+	const char* n;
+	int c;
+	int sT;
+	int eT;
+	const char* d;
+
+	printf("Please enter your course%d name\n",idx);
+	scanf("%s",&n);
+	printf("Please enter your course%d credits\n",idx);
+	scanf("%d",&c);
+	printf("Please enter your course%d start time\n",idx);
+	scanf("%d",&sT);
+	printf("Please enter your course%d end time\n",idx);
+	scanf("%d",&eT);
+	printf("Please enter your course%d dates\n",idx);
+	scanf("%s",&d);
+
+	course* cor= new course(n,c,sT,eT,d);
+
+	return cor;
+
+}
+
+
+
+
+
 int main(){
+	printMenu();
+	course* c1=buildCourse(2);	
+	c1->printCourse();
+	
+
+}
+/*
+
 	int cInc=1;
 	int cor=0;
 	int fSec=0;
@@ -34,6 +76,7 @@ int main(){
 	bool breakout=false;
 	int counter=0;
 	int corCount=sizeof(secSize)/sizeof(secSize[0]);
+
 //working courses
 	course* s0=new course("C0", 4, 1115, 1240, "MW");
 	course* s1=new course("C1", 3, 1330, 1755, "MW");
@@ -87,4 +130,4 @@ int main(){
 }	
 	
 
-	
+*/	

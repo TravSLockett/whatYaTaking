@@ -4,9 +4,11 @@
 class course{
 	public:
 		course (const char* name,int credit, int sTime, int eTime, const char* date);
+		void printCourse();
 		int sT,eT,c;
 		const char* d;
 		const char* n;
+
 };
 
 #endif 
